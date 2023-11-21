@@ -1,0 +1,212 @@
+@font-face {
+	font-family: "Brandon Light";
+	src: url("font.woff2");
+}
+
+:root {
+	--color: #d8bfd8;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color);
+    transition: background-color 1s ease;
+    overflow: hidden;
+    font-family: "Brandon Light";
+    color: #ffffff;
+    user-select: none;
+}
+
+
+a {
+	color: #d8bfd8(255, 208, 0);
+	text-decoration: none;
+	padding: 0;
+}
+
+.center {
+	position: absolute;
+	text-align: center;
+	top: 47%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+}
+
+#border {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	pointer-events: none;
+	z-index: -1;
+}
+
+
+#borderTop,
+#borderBottom {
+	position: absolute;
+	width: 0%;
+	height: 4px;
+	background-color: #ffffff;
+}
+
+#borderRight,
+#borderLeft {
+	position: absolute;
+	width: 3px;
+	height: 0%;
+	background-color: #d8bfd8;
+}
+
+video {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -2;
+	filter: blur(5px) brightness(20%);
+	pointer-events: none;
+}
+
+#clickToPlay {
+	opacity: 0;
+	transition: 1s;
+	position: absolute;
+	color: #d8bfd8;
+	font-size: 20px;
+	cursor: default;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+#main {
+	opacity: 0;
+	transition: 5s;
+}
+
+pre {
+	-webkit-animation: fadein 2s;
+	font-weight: bold;
+	font-size: 13px;
+	user-select: none;
+	color: #d8bfd8;
+	background: repeating-linear-gradient(120deg, hwb(191 0% 0%) 0%, #d8bfd8 20%, hwb(0 100% 0%) 20%);
+	background-size: 60vw 60vw;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	animation: slide 8s linear infinite forwards;
+}
+
+@keyframes slide {
+	0% {
+		background-position-x: 0%;
+	}
+	
+	100% {
+		background-position-x: 60vw;
+	}
+}
+
+pre2 {
+    font-weight: bold;
+    font-size: 13px;
+    user-select: none;
+    color: #d8bfd8(0 100% 0%);
+    background: repeating-linear-gradient(120deg, hwb(191 0% 0%) 0%, #d8bfd8 20%, hwb(0 100% 0%) 20%);
+    background-size: 60vw 60vw;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: slide2 4s linear infinite forwards;
+}
+
+@keyframes slide2 {
+    0% {
+        background-position-x: 0%;
+    }
+
+    100% {
+        background-position-x: 60vw;
+    }
+}
+
+#widgetContainer {
+    opacity: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 80%; /* changed from 400px to 80% */
+    height: 38px;
+    background: repeating-linear-gradient(120deg, hwb(191 0% 0%) 0%, #d8bfd8 20%, hwb(0 100% 0%) 20%);
+    background-size: 60vw 60vw;
+    animation: slide 10s linear infinite forwards;
+    transition: 4s;
+}
+
+#widget {
+    position: absolute;
+    width: 90%; /* changed from 394px to 90% */
+    height: 29px;
+    margin: 3px;
+    background-color: #d8bfd8;
+    z-index: 1;
+    transition: 2s;
+}
+
+#widgetMain {
+    position: absolute;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: 3px;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 85%; /* changed from 374px to 85% */
+    height: 29px;
+    z-index: 2;
+    background-color: #d8bfd8(0, 0, 0);
+}
+
+#burgerMenu {
+    cursor: pointer;
+}
+
+#dropDownContent {
+    display: none;
+    opacity: 0;
+    transition: 2s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-top: 30px;
+}
+
+#links {
+    right: 5px;
+    width: 100px;
+    float: left;
+    margin-top: -4px;
+}
+
+#groups {
+    float: right;
+    margin-top: 5px;
+}
+
+#dropDownContent div a {
+    opacity: 0;
+    transition: 1s;
+    line-height: 18px;
+}
+
+#dropDownContent div span {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#groups a,
+#groups span {
+    float: right;
+}
