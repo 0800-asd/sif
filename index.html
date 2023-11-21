@@ -1,4 +1,5 @@
-<!--rip codesito papu-->
+<!--Me afane esta pagina-->
+<!-- 0800  -->
 
 <html>
 	
@@ -21,10 +22,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#150235">
-    <title>Tu Página</title>
-    <!-- Otros metadatos, enlaces a hojas de estilo y otros elementos aquí #303135-->
-
-    <!-- Coloca el script en tu archivo HTML -->
+    <title>08</title>
     <script>
         function changeThemeColor() {
             const themeColorMeta = document.querySelector('meta[name="theme-color"]');
@@ -36,14 +34,14 @@
                 currentIndex = (currentIndex + 1) % colors.length;
             }
 
-            setInterval(updateColor, 500); // Cambia el color cada 500 ms (ajusta el intervalo según lo desees)
+            setInterval(updateColor, 500);
         }
 
         changeThemeColor();
     </script>
 </head>
 <body>
-    <!-- Contenido de tu página -->
+
 </body>
 </html>
 
@@ -213,7 +211,7 @@
 		document.addEventListener('contextmenu', event => event.preventDefault());
 		document.onkeydown = function (e) {
 			if (event.keyCode == 123) {
-				return false;
+				window.location.href = 'https://youtube.com/';
 			}
 			if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
 				return false;
@@ -255,18 +253,11 @@
                         <script>
                             function makeText40PercentSmaller() {
                                 const specificText = document.getElementById('ak');
-                    
-                                // Get the current font size of the specific text element
                                 const currentFontSize = parseFloat(window.getComputedStyle(specificText).fontSize);
-                    
-                                // Calculate the new font size to be 60% of the original font size
                                 const newFontSize = currentFontSize * 0.6;
-                    
-                                // Apply the new font size to adjust the specific text size
                                 specificText.style.fontSize = `${newFontSize}px`;
                             }
-                    
-                            // Call the function when the page loads
+
                             window.addEventListener('load', makeText40PercentSmaller);
                         </script>
                         <script>
@@ -274,42 +265,39 @@
                                 const container = document.getElementById('textContainer');
                                 const preElement = document.getElementById('adjustableText');
                     
-                                // Reset font size to the original value
+                          
                                 preElement.style.fontSize = 'inherit';
-                    
-                                // Calculate the pre element width and container width
                                 const preWidth = preElement.clientWidth;
                                 const containerWidth = container.clientWidth;
-                    
-                                // Check if the pre element overflows the container
+
                                 if (preWidth > containerWidth) {
-                                    // Calculate the new font size to reduce by 35%
+                                 
                                     const currentFontSize = parseFloat(window.getComputedStyle(preElement).fontSize);
                                     const newFontSize = currentFontSize * 0.65;
                     
-                                    // Apply the new font size to adjust the pre element size
+                                   
                                     preElement.style.fontSize = `${newFontSize}px`;
                                 }
                             }
                     
-                            // Call the function when the page loads and when it resizes
+                        
                             window.addEventListener('load', adjustPreformattedText);
                             window.addEventListener('resize', adjustPreformattedText);
                         </script>
     
 
                         <script>
-                            // Function to add fade-out animation and load a new page
+                           
                             function fadeOutAndLoadPage(destination) {
                                 const content = document.querySelector('body');
                                 content.classList.add('fade-out');
                         
                                 setTimeout(function() {
                                     window.location.href = destination;
-                                }, 1000); // Wait for 1 second (same duration as fade-out animation)
+                                }, 1000); 
                             }
                         
-                            // Wait for the content to load, then remove the 'fade-in' class to hide the element again
+                            
                             document.addEventListener("DOMContentLoaded", function() {
                                 const content = document.querySelector('body');
                                 content.classList.remove('fade-in');
@@ -366,9 +354,7 @@ Y88b  d88P Y88b  d88P Y88b  d88P Y88b  d88P
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠈⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢧⡼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠈⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 </pre>
-<a href="https://dahood.shop/menú" onclick="fadeOutAndLoadPage('https://dahood.shop/menu')">menu</a>
-<a href="https://dahood.shop/ranks" onclick="fadeOutAndLoadPage('https://dahood.shop/ranks')">ranks</a>
-<a href="https://dahood.shop/discord" onclick="fadeOutAndLoadPage('https://dahood.shop/discord')">discord</a>
+<a href="https://dahood.shop/discord" onclick="fadeOutAndLoadPage('https://discord.gg/rhlm')">discord</a>
 
 
 
