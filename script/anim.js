@@ -18,7 +18,7 @@ function animateTitle() {
   let U = 0;
 
   function f() {
-    document.title = n[U] + '.club';
+    document.title = n[U] + '.ar';
     U = (U + 1) % n.length;
   }
 
