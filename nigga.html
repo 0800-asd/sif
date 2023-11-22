@@ -488,23 +488,38 @@
 
 
 
-<p>negga <span id="ip-address"></span></p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi IP</title>
     <script>
-        function ipe(callback){
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function(){
-                if(xhr.readyState === 4 && xhr.status === 200){
-                    callback(xhr.responseText);
+        // Función para obtener la dirección IP del usuario
+        function obtenerIP(callback){
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const ip = JSON.parse(xhr.responseText).ip;
+                    callback(ip);
                 }
             };
             xhr.open("GET", "https://api64.ipify.org?format=json", true);
             xhr.send();
         }
-        function star() {
-    ipe(function (respuesta) {
-        var ip = JSON.parse(respuesta).ip;
-        document.getElementById("ip-address").innerText = ip;
-    });
-}
-        window.onload = star;
+
+        // Función que se ejecuta al cargar la página
+        window.onload = function() {
+            // Llamamos a la función para obtener la IP y actualizamos el contenido
+            obtenerIP(function(ip) {
+                document.getElementById("miIp").innerText = ip;
+            });
+        };
     </script>
+</head>
+<body>
+    <h1>Hola, esta es tu dirección IPv4:</h1>
+    <p id="miIp">Cargando...</p>
+</body>
+</html>
+
