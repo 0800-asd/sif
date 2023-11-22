@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi IP</title>
     <script>
-        // Función para obtener la dirección IP del usuario
-        function obtenerIP(callback){
+        function mipene(callback){
             const xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
@@ -17,18 +10,12 @@
             xhr.open("GET", "https://api.ipify.org?format=json", true);
             xhr.send();
         }
-
-        // Función que se ejecuta al cargar la página
         window.onload = function() {
-            // Llamamos a la función para obtener la IP y actualizamos el contenido
-            obtenerIP(function(ip) {
+            mipene(function(ip) {
                 document.getElementById("miIp").innerText = ip;
             });
         };
     </script>
 </head>
 <body>
-    <h1>Hola, esta es tu dirección IPv4:</h1>
-    <p id="miIp">Cargando...</p>
-</body>
-</html>
+<h2>nigga<h2> <h1><p id="miIp">nigga</p><h1>
